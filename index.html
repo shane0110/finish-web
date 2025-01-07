@@ -103,8 +103,15 @@
         </div>
     </div>
     <button class="btn">
-        <img src="images/TOP.png" alt="">
+        <img src="images/TOP.png" alt="回到最上面">
     </button>
+    <script>
+        const btn = document.querySelector('.btn')
+        btn.addEventListener('click', () => {
+            document.documentElement.scrollTop = 0;  // 針對 HTML 頁面
+            document.body.scrollTop = 0;  // 針對某些瀏覽器
+        });
+    </script>
 </body>
 
 </html>
