@@ -1,0 +1,1031 @@
+/* 基本 CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'XiaCuYuan';
+    src: url('/儷中黑.ttc') format('truetype');
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #E01B1C, #530C27);
+    border-bottom: 2px solid #CDAA5A;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10000000;
+    padding: 0px 12px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+header li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer !important;
+}
+
+header li.active a {
+    background-color: #F5D17B;
+    color: #520E1E;
+    cursor: pointer !important;
+}
+
+header li:hover {
+    background: linear-gradient(to bottom, #B21819, #520E1E);
+    cursor: pointer !important;
+}
+
+header a {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    font-size: clamp(12px, 2vw, 24px);
+    padding: clamp(0px, 2vw, 25px) clamp(0px, 1vw, 25px);
+    gap: 10px;
+    transition: background-color 0.3s ease;
+    width: 10vw;
+    white-space: nowrap;
+}
+
+.img-home {
+    background-image: url("images/home.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+li.active .img-home {
+    background-image: url("images/homeSection.png");
+    transform: scale(1.2);
+}
+
+.img-game {
+    background-image: url("images/game.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: clamp(25px, 3vw, 24px);
+    height: clamp(25px, 3vw, 28px);
+    display: inline-block;
+}
+
+li.active .img-game {
+    background-image: url("images/gameSetion.png");
+    transform: scale(1.2);
+}
+
+.img-user {
+    background-image: url("images/news.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: clamp(25px, 3vw, 28px);
+    height: clamp(25px, 3vw, 28px);
+    display: inline-block;
+}
+
+li.active .img-user {
+    background-image: url("images/newsSetion.png");
+    transform: scale(1.2);
+}
+
+.img-credit {
+    background-image: url("images/crediet.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: clamp(25px, 3vw, 28px);
+    height: clamp(25px, 3vw, 28px);
+    display: inline-block;
+}
+
+li.active .img-credit {
+    background-image: url("images/credietSection.png");
+    transform: scale(1.2);
+}
+
+.img-support {
+    background-image: url("images/customer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: clamp(25px, 3vw, 28px);
+    height: clamp(25px, 3vw, 28px);
+    display: inline-block;
+}
+
+li.active .img-support {
+    background-image: url("images/customerSection.png");
+    transform: scale(1.2);
+}
+
+/* 上面都是navbar */
+
+.banner-center {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.banner-center .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(170px, 25vw, 1500px);
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    z-index: 10000;
+}
+
+.banner-center .icon:hover {
+    transform: translate(-50%, -55%) scale(1.01);
+    filter: brightness(1.5);
+}
+
+.banner .bg {
+    width: 100%;
+    padding-top: 30%;
+    background-image: url(images/home-banner.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.banner .bg img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.banner .coin {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.banner .coin img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.button_section {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10vw;
+}
+
+.button_line {
+    width: 440px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+
+.img1 {
+    display: block;
+    height: 200px;
+    flex: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 444px;
+    animation: switchBackground 0.5s infinite;
+    transition: none;
+}
+
+.img2 {
+    display: block;
+    height: 200px;
+    flex: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 444px;
+    animation: switchBackground2 0.5s infinite;
+    transition: none;
+}
+
+/* 預設動畫 */
+@keyframes switchBackground {
+
+    0%,
+    50% {
+        background-image: url("images/LinePlay1.png");
+    }
+
+    50.01%,
+    100% {
+        background-image: url("images/LinePlay2.png");
+    }
+}
+
+@keyframes switchBackground2 {
+
+    0%,
+    50% {
+        background-image: url("images/Sign1.png");
+    }
+
+    50.01%,
+    100% {
+        background-image: url("images/Sign2.png");
+    }
+}
+
+/* 滑鼠懸停時的效果 */
+.img1:hover {
+    animation: hoverTransition 0.5s infinite;
+    /* 停止預設動畫，開始新的動畫 */
+}
+
+.img2:hover {
+    animation: hoverTransition2 0.5s infinite;
+    /* 停止預設動畫，開始新的動畫 */
+}
+
+/* 懸停時的動畫 */
+@keyframes hoverTransition {
+    0% {
+        background-image: url("images/LineplayHover1.png");
+    }
+
+    100% {
+        background-image: url("images/LineplayHover2.png");
+    }
+}
+
+@keyframes hoverTransition2 {
+    0% {
+        background-image: url("images/SignHover1.png");
+    }
+
+    100% {
+        background-image: url("images/Sigehover2.png");
+    }
+}
+
+.main {
+    background-color: #761622;
+    background-image: url('images/content-bg.png');
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    min-height: 100vh;
+    background-position: center bottom;
+}
+
+
+.main .bg {
+    background: linear-gradient(0deg,
+            #ff9c13 90%,
+            rgba(255, 156, 19, 0.8) 95%,
+            rgba(255, 156, 19, 0) 100%);
+    margin: 0 5vw;
+    min-height: 100vh;
+    padding: 0 5vw 1vw;
+}
+
+
+
+.content {
+    background-color: #ffe5c6;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    box-sizing: border-box;
+    gap: 20px;
+    padding-top: 8vh;
+}
+
+.video-border-radius {
+    position: relative;
+    width: 70%;
+    aspect-ratio: 16 / 9;
+    padding: 3px;
+}
+
+.video-border-radius::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    background: linear-gradient(to top, #CF7913, #FCC831, #CF7913);
+    z-index: 1;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3), -4px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.video_section {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 25px;
+    overflow: hidden;
+    z-index: 2;
+    margin: 6px;
+}
+
+.video_section iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.slogen {
+    display: flex;
+    background-color: #761622;
+    width: 70%;
+    min-height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.slogen .word {
+    padding: 4vh 2vw;
+    color: #FFFDDD;
+    font-size: 22px;
+    width: 60%;
+    line-height: 1.5;
+    text-align: center;
+    display: flex;
+    gap: 3vh;
+    flex-direction: column;
+    order: 1;
+    justify-content: flex-start;
+    font-family: 'XiaCuYuan', sans-serif;
+}
+
+.slogen .word .word-flex-start {
+    margin: 0 auto;
+    line-height: 3rem;
+}
+
+.slogen .word .icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.slogen .word .icon img {
+    width: 23px;
+}
+
+.slogen .word span {
+    font-weight: bold;
+    color: #FFF000;
+}
+
+.slogen .bg-img {
+    width: 40%;
+    background-image: linear-gradient(90deg, #761622 5%, rgba(118, 22, 34, 0) 15%), url(images/slogen-bg.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    order: 2;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    top: -110px;
+}
+
+.info-section img {
+    width: 40%;
+}
+
+.footer-bg {
+    width: 100%;
+    background: linear-gradient(180deg, #D11516 0%, #510B28 100%);
+    border-top: 1px solid #C9A456;
+    padding: 20px 16vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.footer-bg img {
+    display: inline-flex;
+}
+
+.footer-bg .left {
+    display: flex;
+    color: #fff;
+    padding: 4vh 0px;
+    font-size: 12px;
+    order: 1;
+}
+
+.footer-bg .left p {
+    padding: 0px 15px;
+    line-height: 2;
+}
+
+.footer-bg .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    order: 2;
+    padding: 10px;
+}
+
+.footer-bg .right-section {
+    white-space: nowrap;
+    font-size: 12px;
+    color: #ffea77;
+}
+
+.footer-bg hr {
+    width: 1px;
+    height: 100px;
+    border: none;
+    background-color: #ffea77;
+    margin: 0px;
+}
+
+.footer-bg .right p {
+    line-height: 2;
+    letter-spacing: 2px;
+}
+
+.footer-bg .left hr {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background-color: #ffea77;
+    margin: 0px;
+    display: none;
+}
+
+.btn {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    background-color: transparent;
+    border: none;
+    width: 60px;
+    z-index: 1000000;
+}
+
+.qr-right {
+    cursor: pointer;
+    position: fixed;
+    bottom: 150px;
+    right: 60px;
+    background-color: transparent;
+    border: none;
+}
+
+.qrcode {
+    position: relative;
+    width: fit-content;
+}
+
+.qrcode img {
+    display: block;
+}
+
+.qrcode .overlay-image {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+}
+
+
+
+
+
+@media screen and (max-width: 1675px) {
+    header a {
+        text-align: center;
+        width: 15vw;
+        min-width: 100px;
+        gap: 2px;
+    }
+
+    header a span {
+        display: block;
+    }
+
+    .button_section {
+        gap: 6vw;
+    }
+
+    .info-section img {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+
+    .footer-bg {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px 5vw 20px 5vw;
+        justify-content: flex-start;
+    }
+
+    .footer-bg .left {
+        display: flex;
+        flex-direction: column;
+        order: 2;
+    }
+
+    .footer-bg .right {
+        order: 1;
+        padding: 20px;
+    }
+
+    .footer-bg .right hr {
+        display: none;
+    }
+
+    .footer-bg .left p {
+        padding: 0px;
+        line-height: 1.5;
+    }
+
+    .footer-bg .left {
+        padding: 0px;
+    }
+
+    .footer-bg .left hr {
+        width: 100%;
+        height: 0.5px;
+        border: none;
+        background-color: #ffea77;
+        margin: 0px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+
+    .qr-right {
+        display: none;
+
+    }
+
+    .info-section img {
+        width: 45%;
+    }
+
+    .info-section {
+        gap: 10px;
+        top: -60px;
+    }
+
+    .slogen .word .word-flex-start {
+        line-height: 2rem;
+    }
+
+    .content {
+        padding-top: 5vh;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .video-border-radius {
+        width: 90%;
+    }
+
+    .slogen {
+
+        width: 90%;
+    }
+
+    .slogen {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .slogen .word {
+        width: 100%;
+        padding: 5vh 5vw;
+        font-size: 14px;
+        order: 2;
+    }
+
+    .slogen .bg-img {
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        height: 35vh;
+        min-height: 300px;
+        background-position: top center;
+        background-image: linear-gradient(360deg, #761622 0%, rgba(118, 22, 34, 0) 20%), url(images/slogen-bg-mobile.png);
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0px 5px;
+    }
+
+    header ul {
+        gap: 5px;
+    }
+
+    header a {
+        min-width: 80px;
+        font-size: 14px;
+        padding: 8px 5px;
+        flex-direction: column;
+    }
+
+    [class^="img-"] {
+        width: 22px;
+        height: 22px;
+    }
+
+    .img1 {
+        height: 80px;
+    }
+
+    .img2 {
+        height: 80px;
+    }
+
+    .banner .coin img {
+        height: 150px;
+    }
+
+    .banner .coin {
+        top: 60%;
+    }
+
+    .content {
+        padding-top: 3vh;
+        border-radius: 18px;
+        gap: 15px;
+    }
+
+    .main .bg {
+        padding: 3vh 3vw;
+    }
+
+    .video-border-radius::before {
+        padding: 1px;
+        border-radius: 15px;
+    }
+
+    .video_section {
+        border-radius: 15px;
+        margin: 5px;
+    }
+
+    .video-border-radius {
+        padding: 1px;
+        width: 90%;
+    }
+
+    .slogen {
+        flex-direction: column;
+        min-height: auto;
+        width: 90%;
+    }
+
+    .slogen .word {
+        width: 100%;
+        padding: 20px;
+        font-size: 12px;
+        order: 2;
+        gap: 1vh;
+    }
+
+    .slogen .bg-img {
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        height: 25vh;
+        min-height: 250px;
+        background-image: linear-gradient(360deg, #761622 0%, rgba(118, 22, 34, 0) 20%), url(images/slogen-bg-mobile.png);
+        order: 1;
+    }
+
+    .footer-bg .right p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .footer-bg .left p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .info-section {
+        top: 0px;
+    }
+
+    .info-section img {
+        width: 90%;
+    }
+
+    .slogen .word .icon img {
+        width: 20px;
+    }
+
+    .slogen .word .word-flex-start {
+        line-height: 1.5rem;
+    }
+
+    .footer-bg img {
+        width: 15vw;
+    }
+
+    .footer-bg img {
+        width: 10vw;
+    }
+
+    header a {
+        width: 12vw;
+    }
+
+    .button_line a {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    header {
+        padding: 0px 3px;
+    }
+
+    header ul {
+        gap: 3px;
+    }
+
+    header a {
+        min-width: 50px;
+        font-size: 12px;
+        padding: 8px 3px;
+    }
+
+    [class^="img-"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    .banner .bg img {
+        height: 230px;
+    }
+
+    .banner .coin {
+        top: 80%;
+    }
+
+    .banner .coin img {
+        height: 100px;
+    }
+
+    .img1 {
+        height: 80px;
+    }
+
+    .img2 {
+        height: 80px;
+    }
+
+    .button_section {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        z-index: 1000000;
+    }
+
+    .video-border-radius::before {
+        border-radius: 10px;
+    }
+
+    .video_section {
+        border-radius: 10px;
+        margin: 3px;
+    }
+
+    .video-border-radius {
+        padding: 1px;
+    }
+
+    .main .bg {
+        padding: 3vh 3vw;
+        margin-top: -100px;
+    }
+
+
+    .slogen .word .icon img {
+        width: 10px;
+    }
+
+    .footer-bg img {
+        width: 13vw;
+    }
+
+    .banner .bg {
+        width: 100%;
+        padding-top: 65%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(images/上方Banner.png);
+        background-color: transparent !important;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .banner .coin {
+        display: none;
+    }
+
+    .banner-center .icon {
+        top: 40%;
+    }
+
+    .content {
+        margin-top: 2vh;
+        padding-top: 3vh;
+    }
+
+    .slogen .bg-img {
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        height: 20vh;
+        min-height: 200px;
+        background-image: linear-gradient(360deg, #761622 0%, rgba(118, 22, 34, 0) 20%), url(images/slogen-bg-mobile.png);
+        order: 1;
+    }
+}
+
+/* 更小螢幕的優化 */
+@media screen and (max-width: 480px) {
+
+
+    .slogen .word {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .banner .bg img {
+        height: 180px;
+    }
+
+    .banner .coin {
+        top: 70%;
+    }
+
+    .banner .coin img {
+        height: 80px;
+    }
+}
+
+/* iPhone SE 及其他小螢幕設備 */
+@media screen and (max-width: 375px) {
+    header {
+        padding: 0px 2px;
+    }
+
+    header ul {
+        gap: 2px;
+    }
+
+    header a {
+        min-width: 65px;
+        font-size: 11px;
+        padding: 5px 2px;
+    }
+
+    [class^="img-"] {
+        width: 18px;
+        height: 18px;
+    }
+
+    .btn {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .slogen .word {
+        font-size: 10px;
+    }
+
+}
+
+/* 超小螢幕 */
+@media screen and (max-width: 320px) {
+    header a {
+        min-width: 50px;
+        font-size: 10px;
+        padding: 4px px;
+    }
+
+    [class^="img-"] {
+        width: 16px;
+        height: 16px;
+    }
+}
