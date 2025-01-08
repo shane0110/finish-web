@@ -754,7 +754,7 @@ li.active .img-support {
 
     header a {
         min-width: 80px;
-        font-size: 18px;
+        font-size: 14px;
         padding: 8px 5px;
         flex-direction: column;
     }
